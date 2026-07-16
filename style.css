@@ -4,7 +4,7 @@ body, html { margin: 0; padding: 0; height: 100%; width: 100%; }
 #first-screen {
     width: 100%;
     height: 100vh;
-    background-image: url('letter.jpg.jpeg');
+    background-image: url('let1ter.jpg.jpeg');
     background-size: cover;
     background-position: center;
     cursor: pointer; /* تظهر اليد عند مرور الماوس */
