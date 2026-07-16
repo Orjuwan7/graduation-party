@@ -5,41 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دعوة تخرج</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow-x: hidden; }
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+
+        /* الصفحة الأولى: الخلفية الطويلة والظرف */
         #first-screen {
             width: 100%; height: 100vh;
-            background-image: url('let1ter.jpg.jpeg');
+            background-image: url('image.png'); /* تأكدي أن هذه هي صورة الحديقة الطويلة */
             background-size: cover; background-position: center;
-            cursor: pointer; display: flex;
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer;
         }
+        .envelope-container { width: 300px; }
+        .envelope-container img { width: 100%; }
+
         .hidden { display: none; }
-        #invitation-screen {
-            width: 100%; min-height: 100vh;
-            background-image: url('background1.jpg.jpeg');
-            background-size: cover; background-position: center;
-            display: flex; justify-content: center; align-items: center; padding: 20px;
+
+        /* الصفحة الثانية */
+        #second-screen {
+            width: 100%; height: 100vh;
+            background-color: #fdf5f5; /* أو يمكنك وضع صورة هنا */
+            display: flex; justify-content: center; align-items: center;
         }
-        .card-content { width: 90%; max-width: 400px; text-align: center; background: rgba(255,255,255,0.8); padding: 20px; border-radius: 20px; }
-        .photo-box { position: relative; width: 200px; height: 200px; margin: auto; }
-        .frame-img { width: 100%; height: 100%; position: absolute; top:0; left:0; z-index: 2; }
-        .girl-img { position: absolute; top: 15%; left: 15%; width: 70%; height: 70%; border-radius: 50%; object-fit: cover; z-index: 1; }
     </style>
 </head>
 <body>
 
-    <div id="first-screen" onclick="document.getElementById('first-screen').style.display='none'; document.getElementById('invitation-screen').classList.remove('hidden');"></div>
-
-    <div id="invitation-screen" class="hidden">
-        <div class="card-content">
-            <div class="photo-box">
-                <img src="atarr.jpg.jpeg" class="frame-img">
-                <img src="girl.jpg.jpeg" class="girl-img">
-            </div>
-            <p>إلى صديقتنا ابتسام العزيزة، يسرنا دعوتك لحضور حفل تخرجك.</p>
-            <p>📅 2026.8.5 | 🕗 8:30</p>
-            <p>📍 <a href="https://maps.app.goo.gl/Gr2uqvuvrCv31Tbu8?g_st=ic">شاليهات زهرة نيسان</a></p>
+    <div id="first-screen" onclick="goToSecond()">
+        <div class="envelope-container">
+            <img src="letter.jpg.jpeg" alt="الظرف">
         </div>
     </div>
 
+    <div id="second-screen" class="hidden">
+        <h1>هنا ستكون تفاصيل الدعوة</h1>
+    </div>
+
+    <script>
+        function goToSecond() {
+            document.getElementById('first-screen').style.display = 'none';
+            document.getElementById('second-screen').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
