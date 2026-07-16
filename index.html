@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>دعوة تخرج ابتسام</title>
+    <title>دعوة تخرج</title>
 </head>
 <body>
-    <div class="card">
-        <img src="girl.jpg.jpeg" alt="صورة ابتسام" class="graduation-img">
-        <h1>إلى صديقتنا ابتسام العزيزة</h1>
-        <p>لأن لكل إنجاز لحظة تستحق الاحتفال، ولكل حلم جميل نهاية تُروى بفخر، كان لابد أن يكون لك يوم يليق بك وبكل ما بذلته من جهد وتعب حتى وصلتِ إلى هذه اللحظة.</p>
-        
-        <a href="details.html" class="btn">اضغطي هنا لمعرفة تفاصيل الحفل</a>
+
+    <!-- الواجهة الأولى: الظرف -->
+    <div id="envelope-screen">
+        <div class="envelope" onclick="openInvitation()">
+            <img src="letter.jpg.jpeg" alt="الرسالة">
+            <p class="click-text">اضغط هنا</p>
+        </div>
     </div>
+
+    <!-- الواجهة الثانية: التفاصيل -->
+    <div id="invitation-screen" class="hidden">
+        <div class="card-content">
+            <div class="photo-box">
+                <img src="atarr.jpg.jpeg" class="frame-img">
+                <img src="girl.jpg.jpeg" class="girl-img">
+            </div>
+            
+            <p>إلى صديقتنا ابتسام العزيزة، لأن لكل إنجاز لحظة تستحق الاحتفاء، ولكل حلم جميل نهاية تُروى بفخر... يسرنا دعوتك لحضور حفل تخرجك.</p>
+            
+            <div class="info-text">
+                <p>التاريخ: 2026.8.5</p>
+                <p>الوقت: 8:30 مساءً</p>
+                <p>المكان: <a href="https://maps.app.goo.gl/Gr2uqvuvrCv31Tbu8?g_st=ic" target="_blank">شاليهات زهرة نيسان</a></p>
+                <p>كود اللبس: ألوان الباستيل</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openInvitation() {
+            document.getElementById('envelope-screen').style.display = 'none';
+            document.getElementById('invitation-screen').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
