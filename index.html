@@ -1,75 +1,24 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>دعوة التخرج</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
+    <title>دعوة تخرج</title>
 </head>
-
 <body>
+    <div class="card">
+        <img src="image.jpg" alt="صورة التخرج" class="graduation-img">
+        <h1>إلى صديقتنا ابتسام العزيزة</h1>
+        <p>لأن لكل إنجاز لحظة تستحق الاحتفاء، ولكل حلم جميل نهاية تُروى بفخر، كان لابد أن يكون لك يوم يليق بك وبكل ما بذلته من جهد وتعب حتى وصلت إلى هذه اللحظة.</p>
+        
+        <button onclick="showDetails()">اضغط هنا للتفاصيل</button>
 
-<section class="welcome-page">
-
-<div class="frame">
-
-<div class="graduate-image">
-
-<img src="images/photo.png" alt="Graduate">
-
-</div>
-
-<h2>
-إلى صديقتنا ابتسام العزيزة
-</h2>
-
-<p class="text">
-
-لأن لكل إنجازٍ لحظةً تستحق الاحتفاء،
-ولكل حلمٍ جميل نهاية تُروى بفخر،
-كان لابد أن يكون لك يومٌ يليق بك،
-ويحكي رحلة اجتهادك حتى وصلتِ إلى هذه اللحظة.
-
-</p>
-
-<p class="text">
-
-يسرنا دعوتك لمشاركتنا فرحة التخرج،
-والاحتفال بهذه المناسبة الجميلة،
-فوجودك يضيف للمكان بهجةً،
-وللفرح معنىً أجمل.
-
-</p>
-
-<button id="openInvitation">
-
-افتح الدعوة
-
-</button>
-
-</div>
-
-</section>
-
-<script>
-
-document.getElementById("openInvitation").onclick=function(){
-
-window.location.href="invitation.html";
-
-}
-
-</script>
-
+        <div id="details" class="hidden">
+            <p><strong>المكان:</strong> شاليهات زهرة نيسان</p>
+            <p><strong>التاريخ:</strong> 2026.8.5</p>
+            <p><strong>الوقت:</strong> 8:30 مساءً</p>
+            <p><strong>كود اللبس:</strong> ألوان الباستيل</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
