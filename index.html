@@ -2,173 +2,73 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعوة تخرج ابتسام</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>دعوة التخرج</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div id="cover" class="cover">
+<section class="welcome-page">
 
-    <div class="cover-content">
+<div class="frame">
 
-        <h3>Graduate Invitation</h3>
+<div class="graduate-image">
 
-        <h1>دعوة تخرج</h1>
-
-        <p>
-            بكل الحب والفرح<br>
-            يسعدنا حضوركم
-        </p>
-
-        <button id="openBtn">
-            افتح الدعوة
-        </button>
-
-    </div>
+<img src="images/photo.png" alt="Graduate">
 
 </div>
-
-<section id="invitation" class="hidden">
-
-<div class="flowers top-left"></div>
-<div class="flowers top-right"></div>
-<div class="flowers bottom-left"></div>
-<div class="flowers bottom-right"></div>
-
-<div class="card">
-
-<div class="photo">
-
-<img src="images/photo.jpg" alt="Graduate">
-
-</div>
-
-<h4>
-Graduate Invitation
-</h4>
 
 <h2>
-ابتسام
+إلى صديقتنا ابتسام العزيزة
 </h2>
 
-<p class="welcome">
+<p class="text">
 
-يسرني دعوتكم لحضور حفل تخرجي
-
-ومشاركتي هذه الفرحة
-
-وجودكم يسعدني ويزيد المناسبة جمالاً
-
-</p>
-
-<div class="details">
-
-<div class="item">
-
-<span class="icon">📍</span>
-
-<div>
-
-<h5>
-المكان
-</h5>
-
-<p>
-شاليهات زهرة ميسان
-</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<span class="icon">📅</span>
-
-<div>
-
-<h5>
-التاريخ
-</h5>
-
-<p>
-
-05 / 08 / 2026
+لأن لكل إنجازٍ لحظةً تستحق الاحتفاء،
+ولكل حلمٍ جميل نهاية تُروى بفخر،
+كان لابد أن يكون لك يومٌ يليق بك،
+ويحكي رحلة اجتهادك حتى وصلتِ إلى هذه اللحظة.
 
 </p>
 
-</div>
+<p class="text">
 
-</div>
-
-<div class="item">
-
-<span class="icon">🕣</span>
-
-<div>
-
-<h5>
-
-الوقت
-
-</h5>
-
-<p>
-
-8:30 مساءً
+يسرنا دعوتك لمشاركتنا فرحة التخرج،
+والاحتفال بهذه المناسبة الجميلة،
+فوجودك يضيف للمكان بهجةً،
+وللفرح معنىً أجمل.
 
 </p>
 
-</div>
+<button id="openInvitation">
 
-</div>
+افتح الدعوة
 
-<div class="item">
-
-<span class="icon">👗</span>
-
-<div>
-
-<h5>
-
-Dress Code
-
-</h5>
-
-<p>
-
-ألوان الباستيل
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<a
-class="location-btn"
-href="#">
-
-موقع الحفل
-
-</a>
+</button>
 
 </div>
 
 </section>
 
-<script src="script.js"></script>
+<script>
+
+document.getElementById("openInvitation").onclick=function(){
+
+window.location.href="invitation.html";
+
+}
+
+</script>
 
 </body>
 
