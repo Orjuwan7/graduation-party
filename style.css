@@ -1,13 +1,15 @@
-/* 1. إعدادات الصفحة والخلفية */
+/* 1. ربط صورة الخلفية وتنسيق الصفحة */
 body {
-    /* إذا أردتِ إضافة صورة الخلفية، ألغي علامتي التعليق // عن السطر التالي وضعي اسم ملفك */
-    /* background-image: url('background.jpg'); */
-    background-color: #fdf5f5; /* لون باستيل هادئ */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* هنا يتم ربط ملف الصورة الذي رفعتِه */
+    background-image: url('background.jpg'); 
     
+    /* خصائص لضمان تغطية الصورة لكامل الشاشة */
+    background-size: cover;          /* تجعل الصورة تغطي المساحة كاملة */
+    background-position: center;     /* توسيط الصورة */
+    background-repeat: no-repeat;    /* منع تكرار الصورة */
+    background-attachment: fixed;    /* ثبات الخلفية عند التمرير */
+    
+    /* تنسيقات عامة للمحتوى */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,14 +20,14 @@ body {
 
 /* 2. تصميم بطاقة الدعوة */
 .card {
-    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة قليلاً */
+    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة قليلاً لتبرز النص */
     padding: 40px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     max-width: 450px;
     width: 90%;
-    border: 2px solid #f9dcdc; /* إطار ناعم للبطاقة */
+    border: 2px solid #f9dcdc;
 }
 
 /* 3. تصميم صورة الطفلة */
@@ -36,24 +38,12 @@ body {
     border: 6px solid #f9dcdc;
     object-fit: cover;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 4. تنسيق النصوص */
-h1 {
-    color: #b87b7b;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+/* 4. تنسيق النصوص والأزرار */
+h1 { color: #b87b7b; font-size: 24px; }
+p { color: #555; line-height: 1.6; }
 
-p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* 5. تصميم الأزرار */
 .btn {
     display: inline-block;
     background-color: #d8a7a7;
@@ -63,7 +53,7 @@ p {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-    margin: 10px 0;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -71,11 +61,9 @@ p {
     transform: scale(1.05);
 }
 
-/* 6. إخفاء وإظهار التفاصيل */
 .hidden {
     display: none;
     margin-top: 20px;
-    text-align: right;
     border-top: 1px solid #f9dcdc;
     padding-top: 15px;
 }
