@@ -1,15 +1,13 @@
-/* 1. ربط صورة الخلفية وتنسيق الصفحة */
+/* 1. إعدادات الصفحة والخلفية */
 body {
-    background.jpg.jpeg
-    background-image: url('background.jpg'); 
+    /* تم تعديل الاسم ليطابق ملفك في القائمة: background.jpg.jpeg */
+    background-image: url('background.jpg.jpeg'); 
     
-    /* خصائص لضمان تغطية الصورة لكامل الشاشة */
-    background-size: cover;          /* تجعل الصورة تغطي المساحة كاملة */
-    background-position: center;     /* توسيط الصورة */
-    background-repeat: no-repeat;    /* منع تكرار الصورة */
-    background-attachment: fixed;    /* ثبات الخلفية عند التمرير */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     
-    /* تنسيقات عامة للمحتوى */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +18,7 @@ body {
 
 /* 2. تصميم بطاقة الدعوة */
 .card {
-    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة قليلاً لتبرز النص */
+    background: rgba(255, 255, 255, 0.9);
     padding: 40px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -40,10 +38,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* 4. تنسيق النصوص والأزرار */
+/* 4. تنسيق النصوص */
 h1 { color: #b87b7b; font-size: 24px; }
 p { color: #555; line-height: 1.6; }
 
+/* 5. تصميم الأزرار */
 .btn {
     display: inline-block;
     background-color: #d8a7a7;
