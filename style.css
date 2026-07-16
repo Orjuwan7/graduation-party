@@ -1,211 +1,33 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+    background-color: #fdf5f5; /* لون خلفية باستيل */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    border: 2px solid #f9dcdc;
 }
 
-body{
-    font-family:'Cairo',sans-serif;
-    background:#fff8f8;
-    color:#6d4b57;
-    overflow-x:hidden;
+.graduation-img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-/* الصفحة الأولى */
+.hidden { display: none; margin-top: 20px; color: #555; }
 
-.cover{
-    width:100%;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(180deg,#fff,#fdeff3);
-    position:relative;
-}
-
-.cover::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:url("https://www.transparenttextures.com/patterns/flowers.png");
-    opacity:.08;
-}
-
-.cover-content{
-    z-index:2;
-    background:white;
-    padding:60px 40px;
-    border-radius:35px;
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-    max-width:420px;
-    width:90%;
-}
-
-.cover-content h3{
-    color:#d18ca5;
-    font-size:18px;
-    letter-spacing:2px;
-    margin-bottom:15px;
-}
-
-.cover-content h1{
-    font-size:45px;
-    color:#c76d91;
-    margin-bottom:20px;
-}
-
-.cover-content p{
-    color:#7d6873;
-    line-height:2;
-    margin-bottom:35px;
-}
-
-#openBtn{
-    background:#d88fa8;
-    color:white;
-    border:none;
-    padding:15px 45px;
-    border-radius:40px;
-    cursor:pointer;
-    font-size:18px;
-    transition:.3s;
-}
-
-#openBtn:hover{
-    transform:translateY(-3px);
-    background:#c96d90;
-}
-
-/* الدعوة */
-
-.hidden{
-    display:none;
-}
-
-#invitation{
-    min-height:100vh;
-    padding:80px 20px;
-    background:#fffdfb;
-    position:relative;
-}
-
-.card{
-    max-width:750px;
-    margin:auto;
-    background:white;
-    border-radius:35px;
-    padding:50px;
-    box-shadow:0 15px 45px rgba(0,0,0,.08);
-    text-align:center;
-}
-.photo{
-    width:220px;
-    height:220px;
-    margin:auto;
-    border-radius:50%;
-    overflow:hidden;
-    border:8px solid #f8dce6;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    margin-bottom:30px;
-}
-
-.photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.card h4{
-    color:#d18ca5;
-    font-size:20px;
-    letter-spacing:2px;
-    margin-bottom:15px;
-}
-
-.card h2{
-    font-size:48px;
-    color:#b85f84;
-    margin-bottom:25px;
-}
-
-.welcome{
-    line-height:2.2;
-    color:#777;
-    margin-bottom:40px;
-}
-
-.details{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    margin-bottom:40px;
-}
-
-.item{
-    background:#fff7fa;
-    border-radius:20px;
-    padding:20px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    text-align:right;
-}
-
-.icon{
-    font-size:28px;
-}
-
-.item h5{
-    color:#c96d90;
-    margin-bottom:6px;
-    font-size:18px;
-}
-
-.item p{
-    color:#666;
-}
-
-.location-btn{
-    display:inline-block;
-    padding:16px 45px;
-    background:#d88fa8;
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
-    transition:.3s;
-}
-
-.location-btn:hover{
-    background:#c96d90;
-    transform:translateY(-3px);
-}
-
-@media(max-width:768px){
-
-.card{
-    padding:35px 22px;
-}
-
-.card h2{
-    font-size:36px;
-}
-
-.photo{
-    width:170px;
-    height:170px;
-}
-
-.cover-content h1{
-    font-size:34px;
-}
-
-.details{
-    grid-template-columns:1fr;
-}
-
+button {
+    background-color: #f9dcdc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }
