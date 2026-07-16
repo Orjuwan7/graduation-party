@@ -7,22 +7,20 @@
 </head>
 <body>
 
-    <div id="envelope-screen" class="screen">
-        <div class="content-wrapper" onclick="openInvitation()">
-            <img src="let1ter.jpg.jpeg" class="main-image">
-            <p class="click-text">اضغط هنا</p>
-        </div>
+    <!-- الواجهة الأولى: الخلفية الكاملة التي أرسلتِها -->
+    <div id="first-screen">
+        <!-- رابط شفاف يغطي مكان الختم فقط -->
+        <a href="#" class="envelope-link" onclick="openInvitation(event)"></a>
     </div>
 
-    <div id="invitation-screen" class="screen hidden">
+    <!-- الواجهة الثانية: التفاصيل -->
+    <div id="invitation-screen" class="hidden">
         <div class="card-content">
             <div class="photo-box">
                 <img src="atarr.jpg.jpeg" class="frame-img">
                 <img src="girl.jpg.jpeg" class="girl-img">
             </div>
-            
             <p class="main-text">إلى صديقتنا ابتسام العزيزة، لأن لكل إنجاز لحظة تستحق الاحتفاء، ولكل حلم جميل نهاية تُروى بفخر... يسرنا دعوتك لحضور حفل تخرجك.</p>
-            
             <div class="info-box">
                 <p>📅 2026.8.5</p>
                 <p>🕗 8:30</p>
@@ -32,8 +30,9 @@
     </div>
 
     <script>
-        function openInvitation() {
-            document.getElementById('envelope-screen').style.display = 'none';
+        function openInvitation(event) {
+            event.preventDefault(); // لمنع الانتقال لصفحة أخرى
+            document.getElementById('first-screen').style.display = 'none';
             document.getElementById('invitation-screen').classList.remove('hidden');
         }
     </script>
