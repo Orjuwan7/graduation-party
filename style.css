@@ -1,46 +1,32 @@
-/* إعدادات عامة */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-}
+body, html { margin: 0; padding: 0; height: 100%; width: 100%; }
 
-.screen {
+/* الصفحة الأولى: الصورة كاملة وتتحول ليد عند المرور فوقها */
+#first-screen {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url('letter.jpg.jpeg');
     background-size: cover;
     background-position: center;
+    cursor: pointer; /* تظهر اليد عند مرور الماوس */
 }
-
-#envelope-screen { background-image: url('background2.jpg.jpeg'); }
-#invitation-screen { background-image: url('background1.jpg.jpeg'); }
 
 .hidden { display: none; }
 
-/* تنسيق الظرف */
-.main-image { width: 80%; max-width: 400px; cursor: pointer; }
-.click-text { text-align: center; font-weight: bold; color: #555; }
-
-/* تنسيق البطاقة الثانية */
-.card-content {
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    padding: 20px;
+/* الصفحة الثانية */
+#invitation-screen {
+    background-image: url('background2.jpg.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.photo-box { position: relative; width: 200px; height: 200px; margin: auto; }
-.frame-img { width: 100%; height: 100%; position: absolute; top:0; left:0; z-index: 2; }
-.girl-img { width: 70%; height: 70%; position: absolute; top: 15%; left: 15%; border-radius: 50%; z-index: 1; }
-
-.main-text { margin-top: 30px; line-height: 1.8; color: #333; }
-.info-box { margin-top: 20px; font-weight: bold; color: #b87b7b; }
+.card-content { width: 90%; max-width: 400px; text-align: center; }
+.photo-box { position: relative; width: 220px; margin: auto; }
+.frame-img { width: 100%; z-index: 2; position: relative; }
+.girl-img { position: absolute; top: 15%; left: 15%; width: 70%; height: 70%; border-radius: 50%; object-fit: cover; z-index: 1; }
+.main-text { margin-top: 20px; color: #333; line-height: 1.6; }
+.info-box { margin-top: 20px; font-weight: bold; }
 .info-box a { color: #b87b7b; text-decoration: none; }
