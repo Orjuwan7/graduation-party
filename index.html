@@ -7,10 +7,9 @@
 </head>
 <body>
 
-    <!-- الواجهة الأولى: الخلفية الكاملة التي أرسلتِها -->
-    <div id="first-screen">
-        <!-- رابط شفاف يغطي مكان الختم فقط -->
-        <a href="#" class="envelope-link" onclick="openInvitation(event)"></a>
+    <!-- الواجهة الأولى: الخلفية الكاملة (عند الضغط على أي مكان فيها يتم الانتقال) -->
+    <div id="first-screen" onclick="openInvitation()">
+        <!-- تم حذف رابط "اضغط هنا" لأننا سنجعل الصورة بالكامل قابلة للضغط -->
     </div>
 
     <!-- الواجهة الثانية: التفاصيل -->
@@ -30,8 +29,7 @@
     </div>
 
     <script>
-        function openInvitation(event) {
-            event.preventDefault(); // لمنع الانتقال لصفحة أخرى
+        function openInvitation() {
             document.getElementById('first-screen').style.display = 'none';
             document.getElementById('invitation-screen').classList.remove('hidden');
         }
