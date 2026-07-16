@@ -2,12 +2,32 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دعوة تخرج</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow-x: hidden; }
+        #first-screen {
+            width: 100%; height: 100vh;
+            background-image: url('letter.jpg.jpeg');
+            background-size: cover; background-position: center;
+            cursor: pointer; display: flex;
+        }
+        .hidden { display: none; }
+        #invitation-screen {
+            width: 100%; min-height: 100vh;
+            background-image: url('background1.jpg.jpeg');
+            background-size: cover; background-position: center;
+            display: flex; justify-content: center; align-items: center; padding: 20px;
+        }
+        .card-content { width: 90%; max-width: 400px; text-align: center; background: rgba(255,255,255,0.8); padding: 20px; border-radius: 20px; }
+        .photo-box { position: relative; width: 200px; height: 200px; margin: auto; }
+        .frame-img { width: 100%; height: 100%; position: absolute; top:0; left:0; z-index: 2; }
+        .girl-img { position: absolute; top: 15%; left: 15%; width: 70%; height: 70%; border-radius: 50%; object-fit: cover; z-index: 1; }
+    </style>
 </head>
 <body>
 
-    <div id="first-screen" onclick="openInvitation()"></div>
+    <div id="first-screen" onclick="document.getElementById('first-screen').style.display='none'; document.getElementById('invitation-screen').classList.remove('hidden');"></div>
 
     <div id="invitation-screen" class="hidden">
         <div class="card-content">
@@ -16,14 +36,10 @@
                 <img src="girl.jpg.jpeg" class="girl-img">
             </div>
             <p>إلى صديقتنا ابتسام العزيزة، يسرنا دعوتك لحضور حفل تخرجك.</p>
+            <p>📅 2026.8.5 | 🕗 8:30</p>
+            <p>📍 <a href="https://maps.app.goo.gl/Gr2uqvuvrCv31Tbu8?g_st=ic">شاليهات زهرة نيسان</a></p>
         </div>
     </div>
 
-    <script>
-        function openInvitation() {
-            document.getElementById('first-screen').style.display = 'none';
-            document.getElementById('invitation-screen').classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>
