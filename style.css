@@ -1,8 +1,6 @@
-/* 1. إعدادات الصفحة والخلفية */
 body {
-    /* تم تعديل الاسم ليطابق ملفك في القائمة: background.jpg.jpeg */
+    /* استبدلي الاسم أدناه باسم ملف الخلفية الصحيح لديك */
     background-image: url('background.jpg.jpeg'); 
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +14,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 2. تصميم بطاقة الدعوة */
 .card {
     background: rgba(255, 255, 255, 0.9);
     padding: 40px;
@@ -25,10 +22,15 @@ body {
     text-align: center;
     max-width: 450px;
     width: 90%;
-    border: 2px solid #f9dcdc;
+    border: 8px double #f9dcdc; /* إطار مزدوج */
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* 3. تصميم صورة الطفلة */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .graduation-img {
     width: 180px;
     height: 180px;
@@ -38,11 +40,9 @@ body {
     margin-bottom: 20px;
 }
 
-/* 4. تنسيق النصوص */
 h1 { color: #b87b7b; font-size: 24px; }
 p { color: #555; line-height: 1.6; }
 
-/* 5. تصميم الأزرار */
 .btn {
     display: inline-block;
     background-color: #d8a7a7;
@@ -51,18 +51,12 @@ p { color: #555; line-height: 1.6; }
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.4s ease;
     margin-top: 20px;
 }
 
 .btn:hover {
-    background-color: #c49191;
-    transform: scale(1.05);
-}
-
-.hidden {
-    display: none;
-    margin-top: 20px;
-    border-top: 1px solid #f9dcdc;
-    padding-top: 15px;
+    background-color: #b87b7b;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
