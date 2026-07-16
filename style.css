@@ -1,5 +1,13 @@
+/* 1. إعدادات الصفحة والخلفية */
 body {
-    background-color: #fdf5f5; /* لون خلفية ناعم */
+    /* إذا أردتِ إضافة صورة الخلفية، ألغي علامتي التعليق // عن السطر التالي وضعي اسم ملفك */
+    /* background-image: url('background.jpg'); */
+    background-color: #fdf5f5; /* لون باستيل هادئ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,18 +16,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 2. تصميم بطاقة الدعوة */
 .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة قليلاً */
     padding: 40px;
     border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
-    max-width: 400px;
-    border: 1px solid #f9dcdc;
-    background-image: radial-gradient(#fdf5f5 1px, transparent 1px);
-    background-size: 20px 20px;
+    max-width: 450px;
+    width: 90%;
+    border: 2px solid #f9dcdc; /* إطار ناعم للبطاقة */
 }
 
+/* 3. تصميم صورة الطفلة */
 .graduation-img {
     width: 180px;
     height: 180px;
@@ -27,8 +36,24 @@ body {
     border: 6px solid #f9dcdc;
     object-fit: cover;
     margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* 4. تنسيق النصوص */
+h1 {
+    color: #b87b7b;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 5. تصميم الأزرار */
 .btn {
     display: inline-block;
     background-color: #d8a7a7;
@@ -36,11 +61,21 @@ body {
     padding: 12px 25px;
     border-radius: 25px;
     text-decoration: none;
-    margin-top: 20px;
+    font-weight: bold;
     transition: 0.3s;
+    margin: 10px 0;
 }
 
 .btn:hover {
     background-color: #c49191;
     transform: scale(1.05);
+}
+
+/* 6. إخفاء وإظهار التفاصيل */
+.hidden {
+    display: none;
+    margin-top: 20px;
+    text-align: right;
+    border-top: 1px solid #f9dcdc;
+    padding-top: 15px;
 }
